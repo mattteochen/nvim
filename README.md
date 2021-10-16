@@ -17,7 +17,6 @@ see [this](https://thomasventurini.com/articles/install-neovim-05-in-ubuntu/)
 - copy paste this init.vim file in
 ```
 ~/.config/nvim 
-
 ```
 
 ## install Vim Plug
