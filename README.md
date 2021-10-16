@@ -52,5 +52,5 @@ nvim init.vim
 :LspInstallServer
 ```
 
-## enjoy being a man
+## enjoy being a man :+1
 
