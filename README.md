@@ -35,6 +35,9 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 ```
 > you have to put your Py3 dir 
 
+## make sure to have deoplete dependences installed
+see [this](https://github.com/Shougo/deoplete.nvim)
+
 ## open init.vim file with nvim
 ```
 nvim init.vim
