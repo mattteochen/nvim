@@ -52,5 +52,6 @@ nvim init.vim
 :LspInstallServer
 ```
 
-## enjoy being a man :+1
+## enjoy being a man
+:hand_over_mouth: 	
 
