@@ -10,7 +10,7 @@ brew install nvim
 see [this](https://thomasventurini.com/articles/install-neovim-05-in-ubuntu/)
 
 ## for Win
-:rofl:
+see [this](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## add init.vim file
 - create a "nvim" dir in 
