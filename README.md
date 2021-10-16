@@ -10,8 +10,15 @@ brew install nvim
 see [this](https://thomasventurini.com/articles/install-neovim-05-in-ubuntu/)
 
 ## add init.vim file
-- create a "nvim" dir in ~/.config
-- copy paste this init.vim file in ~/.config/nvim 
+- create a "nvim" dir in 
+```
+~/.config
+```
+- copy paste this init.vim file in
+```
+~/.config/nvim 
+
+```
 
 ## install Vim Plug
 see [this](https://github.com/junegunn/vim-plug)
@@ -32,6 +39,9 @@ nvim init.vim
 ```
 
 ## run PlugInstall inside nvim
+```
+:PlugInstall
+```
 
 ## check plugin health (Telescope, ...) inside nvim
 ```
