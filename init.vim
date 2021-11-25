@@ -27,14 +27,12 @@ set noswapfile              " disable creating swap file
 
 call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-startify'
 Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'sharkdp/fd'
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter.git'
-Plug 'https://github.com/kyazdani42/nvim-web-devicons.git'
 Plug 'https://github.com/BurntSushi/ripgrep.git'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popupnvim'
@@ -42,6 +40,8 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'https://github.com/neovim/nvim-lsp'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -49,10 +49,11 @@ Plug 'https://github.com/roxma/nvim-yarp.git'
 Plug 'https://github.com/roxma/vim-hug-neovim-rpc.git'
 call plug#end()
 
+let g:airline#extensions#tabline#enabled = 1
 let g:python3_host_prog = '/usr/local/bin/python3'
 let g:deoplete#enable_at_startup = 1
-"let g:deoplete#enable_at_startup = 1
 
+let g:airline_theme='dark'
 colorscheme gruvbox
 "set splitright
 set splitbelow
@@ -70,8 +71,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 "remap go to end and start line
 nnoremap <leader>l $
 nnoremap <leader>a 0
-inoremap <C-a> <HOME>
-inoremap <C-l> <END>
+inoremap <C-q> <HOME>
+inoremap <C-p> <END>
 
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
