@@ -72,7 +72,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>l $
 nnoremap <leader>a 0
 inoremap <C-q> <HOME>
-inoremap <C-p> <END>
+inoremap <C-w> <END>
 
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
