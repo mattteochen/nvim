@@ -42,6 +42,7 @@ Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'https://github.com/neovim/nvim-lsp'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -51,7 +52,7 @@ call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
 let g:python3_host_prog = '/usr/local/bin/python3'
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 0
 
 let g:airline_theme='dark'
 colorscheme gruvbox
