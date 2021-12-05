@@ -72,6 +72,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 "remap go to end and start line
 nnoremap <leader>l $
 nnoremap <leader>a 0
+vnoremap <leader>l $
+vnoremap <leader>a 0
 inoremap <C-q> <HOME>
 inoremap <C-w> <END>
 
