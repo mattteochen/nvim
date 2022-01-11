@@ -72,6 +72,7 @@ vnoremap <leader>l $
 vnoremap <leader>a 0
 inoremap <C-q> <HOME>
 inoremap <C-w> <END>
+inoremap <C-x> <Esc>
 
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
