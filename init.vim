@@ -31,8 +31,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-startify'
 Plug 'https://github.com/morhetz/gruvbox.git'
-Plug 'https://github.com/nvim-treesitter/nvim-treesitter.git'
 Plug 'https://github.com/BurntSushi/ripgrep.git'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -44,6 +44,24 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 lua require('lspconfig').clangd.setup{ on_attach=require'completion'.on_attach }
+
+" Treesitter module
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    custom_captures = {
+      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+      ["foo.bar"] = "Identifier",
+    },
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
 
 let g:airline#extensions#tabline#enabled = 1
 
