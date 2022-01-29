@@ -27,8 +27,7 @@ if (ret != 0):
 else:
     print(f'{dir_header}{ok}')
 
-ret = os.system('sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'')
+ret = os.system("sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'")
 if (ret != 0):
     print(f'{vim_plug_header}{error}. Please follow manual steps!')
     exit(ret)
