@@ -27,12 +27,17 @@ if (ret != 0):
 else:
     print(f'{dir_header}{ok}')
 
-#ret = os.system("sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'")
-#if (ret != 0):
-#    print(f'{vim_plug_header}{error}. Please follow manual steps!')
-#    exit(ret)
-#else:
-#    print(f'{vim_plug_header}{ok}')
+ret = os.system('cd && sudo apt update && sudo apt -y upgrade && sudo apt update && sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates && curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && sudo apt -y install nodejs && sudo apt -y  install gcc g++ make')
+if (ret != 0):
+    print('Can not install Node v12. Please install manually for Plugins')
+    exit(ret)
+
+ret = os.system('curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+if (ret != 0):
+    print(f'{vim_plug_header}{error}. Please follow manual steps!')
+    exit(ret)
+else:
+    print(f'{vim_plug_header}{ok}')
 
 ret = os.system('sudo apt-get install ripgrep')
 if (ret != 0):
