@@ -7,7 +7,17 @@ brew install nvim
 ```
 
 ## for Ubuntu 
+
+Use the installer:
+```
+python3 run.py
+```
+
+or
+
 see [this](https://thomasventurini.com/articles/install-neovim-05-in-ubuntu/)
+
+and follow the steps below
 
 ## for Win
 see [this](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
@@ -34,9 +44,6 @@ specify your Py directory in init.vim configuration file
 let g:python3_host_prog = '/usr/local/bin/python3'
 ```
 > you have to put your Py3 dir 
-
-## make sure to have deoplete dependences installed
-see [this](https://github.com/Shougo/deoplete.nvim)
 
 ## open init.vim file with nvim
 ```
