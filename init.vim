@@ -41,6 +41,7 @@ Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tomlion/vim-solidity'
 call plug#end()
 
 lua require('lspconfig').clangd.setup{ on_attach=require'completion'.on_attach }
