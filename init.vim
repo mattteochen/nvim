@@ -36,7 +36,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'https://github.com/neovim/nvim-lsp'
+"Plug 'nvim-lua/completion-nvim'
+"Plug 'https://github.com/neovim/nvim-lsp'
 Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -44,7 +45,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomlion/vim-solidity'
 call plug#end()
 
-lua require('lspconfig').clangd.setup{ on_attach=require'completion'.on_attach }
+"lua require('lspconfig').clangd.setup{on_attach=require'completion'.on_attach}
 
 " Treesitter module
 lua <<EOF
@@ -66,7 +67,7 @@ EOF
 
 let g:airline#extensions#tabline#enabled = 1
 
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/usr/bin/python3'
 
 let g:airline_theme='dark'
 colorscheme gruvbox
