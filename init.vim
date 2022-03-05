@@ -23,9 +23,11 @@ set ttyfast                 " Speed up scrolling in Vim
 syntax on
 set spell                   " enable spell check (may need to download language package)
 set noswapfile              " disable creating swap file
+set nowrap
 " set backupdir=~/.cache/vim " Directory to store backup files
 
 call plug#begin('~/.vim/plugged')
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lua/completion-nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
