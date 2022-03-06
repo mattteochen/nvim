@@ -24,9 +24,13 @@ syntax on
 set spell                   " enable spell check (may need to download language package)
 set noswapfile              " disable creating swap file
 set nowrap
+set encoding=UTF-8
 " set backupdir=~/.cache/vim " Directory to store backup files
 
 call plug#begin('~/.vim/plugged')
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
+Plug 'ryanoasis/vim-devicons'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-lua/completion-nvim'
 Plug 'scrooloose/nerdtree'
@@ -86,6 +90,10 @@ nnoremap <leader>fs <cmd>Telescope grep_string<cr>
 nnoremap <leader>fg <cmd>Telescope live_greps<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fw <cmd>Telescope live_grep<cr>
+
+" NERDTree open
+nnoremap <leader>ne <cmd>NERDTree <cr>
 
 "remap go to end and start line
 nnoremap <leader>l $
